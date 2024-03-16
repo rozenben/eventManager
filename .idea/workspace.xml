@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="add eventManager.postman_collection.json for use API in postman">
+    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="remove file">
       <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eventManagerTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.db" beforeDir="false" afterPath="$PROJECT_DIR$/events.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users_db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_db_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -52,7 +54,13 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests in eventManagerTest.py">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\eventManager\DB" />
+      <recent name="C:\workspace\eventManager\Tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="eventManager" />
       <option name="ENV_FILES" value="" />
@@ -75,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Tests.eventManagerTest.TestEventScheduler.test_schedule_reminder" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="eventManager" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,11 +94,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;eventManagerTest.TestEventScheduler.test_schedule_reminder&quot;" />
+      <option name="_new_target" value="&quot;Tests.eventManagerTest.TestEventScheduler.test_schedule_reminder&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for eventManagerTest.TestMain.test_create_event" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Tests.eventManagerTest.TestMain.test_create_event" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="eventManager" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,11 +109,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;eventManagerTest.TestMain.test_create_event&quot;" />
+      <option name="_new_target" value="&quot;Tests.eventManagerTest.TestMain.test_create_event&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for eventManagerTest.TestUsersDBManager.test_create_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for Tests.eventManagerTest.TestUsersDBManager.test_create_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="eventManager" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,7 +124,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;eventManagerTest.TestUsersDBManager.test_create_user&quot;" />
+      <option name="_new_target" value="&quot;Tests.eventManagerTest.TestUsersDBManager.test_create_user&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -131,16 +139,16 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/eventManagerTest.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Tests/eventManagerTest.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in eventManagerTest.py" />
-        <item itemvalue="Python tests.Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder" />
-        <item itemvalue="Python tests.Python tests for eventManagerTest.TestMain.test_create_event" />
-        <item itemvalue="Python tests.Python tests for eventManagerTest.TestUsersDBManager.test_create_user" />
+        <item itemvalue="Python tests.Python tests for Tests.eventManagerTest.TestEventScheduler.test_schedule_reminder" />
+        <item itemvalue="Python tests.Python tests for Tests.eventManagerTest.TestMain.test_create_event" />
+        <item itemvalue="Python tests.Python tests for Tests.eventManagerTest.TestUsersDBManager.test_create_user" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +240,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710623006958</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add unit tests">
+      <option name="closed" value="true" />
+      <created>1710625039366</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710625039366</updated>
+    </task>
+    <task id="LOCAL-00011" summary="remove file">
+      <option name="closed" value="true" />
+      <created>1710625216545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710625216545</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,7 +269,9 @@
     <MESSAGE value="add documentation" />
     <MESSAGE value="add Requirements.txt file to setup python environment" />
     <MESSAGE value="add eventManager.postman_collection.json for use API in postman" />
-    <option name="LAST_COMMIT_MESSAGE" value="add eventManager.postman_collection.json for use API in postman" />
+    <MESSAGE value="add unit tests" />
+    <MESSAGE value="remove file" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -254,6 +280,16 @@
           <url>file://$PROJECT_DIR$/events_db_manager.py</url>
           <line>74</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eventScheduler.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -53,17 +53,11 @@ security = HTTPBasic()
 
 # Function to get current username based on HTTPBasic credentials
 def get_current_username(credentials: HTTPBasicCredentials = Depends(security), db: Session = Depends(get_users_db)):
-    # Retrieving all users from database
-    users = users_db_manager.get_all_users(db)
-    if users:
-        for user in users:
-            # Checking if credentials match any user
-            if credentials.username == user.username and credentials.password == user.password:
-                return credentials.username
-            else:
-                # Raising HTTPException if credentials are incorrect
-                raise HTTPException(status_code=401, detail="Incorrect username or password")
-    # Raising HTTPException if no users found or no matching credentials
+
+    user = users_db_manager.get_user_by_username(credentials.username, db)
+    if not user or not isinstance(user, dict):  # user is dict only if user not found
+        if credentials.password == user.password:
+            return credentials.username
     raise HTTPException(status_code=401, detail="Incorrect username or password")
 
 
@@ -81,6 +75,14 @@ def create_event(username: str = Body(...),
 def get_all_users(db: Session = Depends(get_users_db)):
     """Retrieves a list of all users."""
     return users_db_manager.get_all_users(db)
+
+
+# Endpoint to retrieve a specific user by username
+@app.get("/users/{username}")
+def get_user(username: str = Path(..., description="username"),
+             db: Session = Depends(get_users_db)):
+    """Retrieves details of a specific event by its ID."""
+    return users_db_manager.get_user_by_username(username, db)
 
 
 # Endpoint to create a new event

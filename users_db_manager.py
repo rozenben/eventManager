@@ -1,4 +1,4 @@
-from fastapi import Body
+from fastapi import Body, Path
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import Session, declarative_base
 
@@ -52,3 +52,21 @@ def get_all_users(db: Session = None):
     users = db.query(User)
     users = users.order_by(User.username)
     return users.all()
+
+
+def get_user_by_username(username: str = Path(..., description="username"),
+                         db: Session = None):
+    """
+    Retrieves details of a specific event by its ID.
+
+    Args:
+        username (str): username.
+        db (Session): Database session.
+
+    Returns:
+        dict: Details of the user.
+    """
+    user = db.query(User).filter(User.username == username).first()
+    if user is None:
+        return {"message": "Event not found"}
+    return user
