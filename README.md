@@ -49,6 +49,10 @@ Key features:
 
 To run the Event Management System, ensure you have the necessary dependencies installed. Then, execute `main.py` using Python. Access the provided FastAPI endpoints to interact with the system.
 
+You can use Postman to use in those APIs, see and use file "eventManager.postman_collection.json" 
+
+first create a user with route "/users", and use this username and password to basic authorization
+
 ## Configuration
 
 Ensure to configure environment variables for email sender credentials (`EMAIL_SENDER_USERNAME` and `EMAIL_SENDER_PASSWORD`) and sender email address (`SENDER`) for proper functioning of the reminder email feature.
