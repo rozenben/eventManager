@@ -51,7 +51,7 @@ To run the Event Management System, ensure you have the necessary dependencies i
 
 You can use Postman to use in those APIs, see and use file "eventManager.postman_collection.json" 
 
-first create a user with route "/users", and use this username and password to basic authorization
+First create a user with route "/users", and use this username and password to basic authorization for all events routes
 
 ## Configuration
 
