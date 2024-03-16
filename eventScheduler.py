@@ -51,7 +51,7 @@ class EventScheduler:
             updated_event
             db
         """
-        for i, existing_event in enumerate(db_manager.get_all_events("date", db)):
+        for i, existing_event in enumerate(events_db_manager.get_all_events("date", db)):
             if existing_event.id == event_id:
                 self.remove_job(event_id)  # Remove existing job
                 self.schedule_reminder(updated_event)  # Schedule reminder for updated event

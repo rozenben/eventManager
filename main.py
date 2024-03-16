@@ -44,8 +44,6 @@ def get_users_db():
 app = FastAPI()
 security = HTTPBasic()
 
-# users = []
-
 
 def get_current_username(credentials: HTTPBasicCredentials = Depends(security), db: Session = Depends(get_users_db)):
 

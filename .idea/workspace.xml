@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="add queries">
+    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="fix auth">
       <change afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users_db_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/events_db_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eventScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/eventScheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -121,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710610227895</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix auth">
+      <option name="closed" value="true" />
+      <created>1710615052365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710615052365</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,7 +135,8 @@
     <MESSAGE value="add validation on email of participant and send email to participants when create or update events" />
     <MESSAGE value="create db manager" />
     <MESSAGE value="add queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="add queries" />
+    <MESSAGE value="fix auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix auth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
