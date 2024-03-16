@@ -52,7 +52,7 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder">
+  <component name="RunManager" selected="Python tests.Python tests in eventManagerTest.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="eventManager" />
       <option name="ENV_FILES" value="" />
@@ -137,9 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in eventManagerTest.py" />
         <item itemvalue="Python tests.Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder" />
         <item itemvalue="Python tests.Python tests for eventManagerTest.TestMain.test_create_event" />
-        <item itemvalue="Python tests.Python tests in eventManagerTest.py" />
         <item itemvalue="Python tests.Python tests for eventManagerTest.TestUsersDBManager.test_create_user" />
       </list>
     </recent_temporary>
