@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="add documentation">
-      <change afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Requirements.txt" afterDir="false" />
+    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="add eventManager.postman_collection.json for use API in postman">
       <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eventManagerTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +18,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Python Unit Test" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -36,6 +39,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder.executor": "Run",
+    "Python tests.Python tests for eventManagerTest.TestMain.test_create_event.executor": "Run",
+    "Python tests.Python tests for eventManagerTest.TestUsersDBManager.test_create_user.executor": "Run",
+    "Python tests.Python tests in eventManagerTest.py.executor": "Run",
     "Python.Email.executor": "Run",
     "Python.EventScheduler.executor": "Run",
     "Python.create_db.executor": "Run",
@@ -45,7 +52,7 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="eventManager" />
       <option name="ENV_FILES" value="" />
@@ -68,6 +75,74 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="eventManager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;eventManagerTest.TestEventScheduler.test_schedule_reminder&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for eventManagerTest.TestMain.test_create_event" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="eventManager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;eventManagerTest.TestMain.test_create_event&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for eventManagerTest.TestUsersDBManager.test_create_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="eventManager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;eventManagerTest.TestUsersDBManager.test_create_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in eventManagerTest.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="eventManager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/eventManagerTest.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for eventManagerTest.TestEventScheduler.test_schedule_reminder" />
+        <item itemvalue="Python tests.Python tests for eventManagerTest.TestMain.test_create_event" />
+        <item itemvalue="Python tests.Python tests in eventManagerTest.py" />
+        <item itemvalue="Python tests.Python tests for eventManagerTest.TestUsersDBManager.test_create_user" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -141,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710617449405</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add Requirements.txt file to setup python environment">
+      <option name="closed" value="true" />
+      <created>1710622905054</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710622905054</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add eventManager.postman_collection.json for use API in postman">
+      <option name="closed" value="true" />
+      <created>1710623006958</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710623006958</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -152,7 +243,9 @@
     <MESSAGE value="fix auth" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="add documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add documentation" />
+    <MESSAGE value="add Requirements.txt file to setup python environment" />
+    <MESSAGE value="add eventManager.postman_collection.json for use API in postman" />
+    <option name="LAST_COMMIT_MESSAGE" value="add eventManager.postman_collection.json for use API in postman" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
