@@ -18,6 +18,7 @@ DATABASE_URL = "sqlite:///events.db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+
 class Event(Base):
     __tablename__ = "events"
     id = Column(Integer, primary_key=True)
@@ -29,7 +30,7 @@ class Event(Base):
 
 
 def create_event(title: str = Body(...), description: str = Body(...), date: datetime = Body(...),
-                 location: str = Body(...), participants: List[str] = Body(...), db: Session=None):
+                 location: str = Body(...), participants: List[str] = Body(...), db: Session = None):
     # db = Depends(get_db)
     # db: Session = Depends(get_db)
     for participant in participants:
@@ -51,9 +52,10 @@ def create_event(title: str = Body(...), description: str = Body(...), date: dat
 
 def get_all_events(sort_by: Optional[str] = Query(None), db: Session = None):
     events = db.query(Event)
-    if sort_by == "date":
+    if sort_by == "location":
+        events = events.order_by(Event.location)
+    else:
         events = events.order_by(Event.date)
-    # TODO Add more sorting options based on your needs (e.g., location)
     return events.all()
 
 
@@ -62,6 +64,18 @@ def get_event(event_id: int = Path(..., description="ID of the event to retrieve
     if event is None:
         return {"message": "Event not found"}
     return event
+
+
+def get_event_by(filter_by: str, filter_value: str, db):
+    query = db.query(Event)
+    if filter_by and filter_value:
+        # Build the filter based on the provided parameters
+        filter_condition = getattr(Event, filter_by).startswith(filter_value)  # Access attribute dynamically
+        query = query.filter(filter_condition)
+        events = query.all()
+        if not events:
+            return {"message": "No events found matching the filter criteria."}
+        return events
 
 
 def update_event(event_id: int = Path(..., description="ID of the event to update"),

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="add validation on email of participant and send email to participants when create or update events">
+    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="create db manager">
       <change afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eventScheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -104,12 +103,32 @@
       <option name="project" value="LOCAL" />
       <updated>1710581730983</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create db manager">
+      <option name="closed" value="true" />
+      <created>1710608387181</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710608387181</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create a SQLite local DB and update the API function to work with" />
     <MESSAGE value="add validation on email of participant and send email to participants when create or update events" />
-    <option name="LAST_COMMIT_MESSAGE" value="add validation on email of participant and send email to participants when create or update events" />
+    <MESSAGE value="create db manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="create db manager" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/db_manager.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
