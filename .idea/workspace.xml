@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="fix bug">
+    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="add documentation">
       <change afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Requirements.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eventScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/eventScheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events_db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/events_db_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users_db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/users_db_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710615192275</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add documentation">
+      <option name="closed" value="true" />
+      <created>1710617449405</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710617449405</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,7 +151,8 @@
     <MESSAGE value="add queries" />
     <MESSAGE value="fix auth" />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="add documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
