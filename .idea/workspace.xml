@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="">
+    <list default="true" id="5a90d48f-5abc-4f78-8bc5-65c016bedb95" name="Changes" comment="create a SQLite local DB and update the API function to work with">
+      <change afterPath="$PROJECT_DIR$/Email.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/create_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Email.executor": "Run",
     "Python.create_db.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -83,17 +85,19 @@
       <option name="presentableId" value="Default" />
       <updated>1710425998833</updated>
     </task>
+    <task id="LOCAL-00001" summary="create a SQLite local DB and update the API function to work with">
+      <option name="closed" value="true" />
+      <created>1710431966843</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710431966843</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create a SQLite local DB and update the API function to work with" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a SQLite local DB and update the API function to work with" />
   </component>
 </project>
