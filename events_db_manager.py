@@ -3,7 +3,6 @@ from typing import List, Optional
 import re
 
 from fastapi import Body, Depends, Query, Path
-from sqlalchemy.orm import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String, DateTime
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
@@ -31,8 +30,6 @@ class Event(Base):
 
 def create_event(title: str = Body(...), description: str = Body(...), date: datetime = Body(...),
                  location: str = Body(...), participants: List[str] = Body(...), db: Session = None):
-    # db = Depends(get_db)
-    # db: Session = Depends(get_db)
     for participant in participants:
         if not is_valid_email(participant):
             return {f"participant {participant} should be a valid email"}

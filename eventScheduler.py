@@ -7,7 +7,7 @@ from apscheduler.triggers.cron import CronTrigger
 from datetime import datetime, timedelta
 import smtplib
 
-import db_manager
+import events_db_manager
 
 
 class EventScheduler:
