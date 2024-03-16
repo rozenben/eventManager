@@ -17,11 +17,17 @@ class EventScheduler:
     _instance = None
 
     def __new__(cls):
+        """
+        Ensures only one instance of EventScheduler is created using the Singleton pattern.
+        """
         if not cls._instance:
             cls._instance = super(EventScheduler, cls).__new__(cls)
         return cls._instance
 
     def __init__(self):
+        """
+        Initializes the EventScheduler instance with necessary attributes.
+        """
         self.scheduler = BackgroundScheduler()
         self.username = os.environ.get("EMAIL_SENDER_USERNAME", "eventManager")
         self.password = os.environ.get("EMAIL_SENDER_PASSWORD", "gzic evwm ibig qiag")
@@ -29,7 +35,7 @@ class EventScheduler:
 
     def create_scheduler(self):
         """
-        Initializes the BackgroundScheduler.
+        Initializes the BackgroundScheduler instance.
         """
         self.scheduler.start()
 
@@ -38,7 +44,7 @@ class EventScheduler:
         Adds a new event and schedules a reminder email.
 
         Args:
-            event object represent event
+            event: Object representing the event.
         """
         self.schedule_reminder(event)
 
@@ -48,8 +54,8 @@ class EventScheduler:
 
         Args:
             event_id (int): ID of the event to update.
-            updated_event
-            db
+            updated_event: Updated event object.
+            db: Database session.
         """
         for i, existing_event in enumerate(events_db_manager.get_all_events("date", db)):
             if existing_event.id == event_id:
@@ -62,7 +68,7 @@ class EventScheduler:
         Schedules a job to send a reminder email 30 minutes before the event.
 
         Args:
-            event
+            event: Object representing the event.
         """
         event_start_time = event.date
         reminder_time = event_start_time - timedelta(minutes=30)
@@ -91,7 +97,7 @@ class EventScheduler:
         Sends a reminder email for the event.
 
         Args:
-            event.
+            event: Object representing the event.
         """
         try:
             context = ssl.create_default_context()
@@ -100,9 +106,9 @@ class EventScheduler:
                 smtp.login(self.username, self.password)
                 message = (f"You are invited to the event {event.title}"
                            f"\n Description: {event.description}"
-                           f"\n location {event.location}"
-                           f"\n invited: {event.participants}"
-                           f"\n on the date {event.date}")
+                           f"\n Location {event.location}"
+                           f"\n Invited: {event.participants}"
+                           f"\n On the date {event.date}")
                 for participant in event.participants:
                     smtp.sendmail(self.sender, participant, message)
 

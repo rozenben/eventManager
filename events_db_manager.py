@@ -19,6 +19,9 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 class Event(Base):
+    """
+    SQLAlchemy model representing an Event entity.
+    """
     __tablename__ = "events"
     id = Column(Integer, primary_key=True)
     title = Column(String, nullable=False)
@@ -30,16 +33,29 @@ class Event(Base):
 
 def create_event(title: str = Body(...), description: str = Body(...), date: datetime = Body(...),
                  location: str = Body(...), participants: List[str] = Body(...), db: Session = None):
+    """
+    Creates a new event and saves it to the database.
+
+    Args:
+        title (str): Title of the event.
+        description (str): Description of the event.
+        date (datetime): Date and time of the event.
+        location (str): Location of the event.
+        participants (List[str]): List of participants' email addresses.
+        db (Session): Database session.
+
+    Returns:
+        dict: Message indicating success or failure of event creation along with event details.
+    """
     for participant in participants:
         if not is_valid_email(participant):
             return {f"participant {participant} should be a valid email"}
 
-    """Creates a new event and saves it to the database."""
     new_event = Event(title=title, description=description, date=date, location=location,
                       participants=",".join(participants))
     db.add(new_event)
-    db.commit()  # Commit changes to the database
-    db.refresh(new_event)  # Refresh to retrieve generated ID
+    db.commit()
+    db.refresh(new_event)
 
     es = eventScheduler()
     es.send_reminder(new_event)
@@ -48,6 +64,16 @@ def create_event(title: str = Body(...), description: str = Body(...), date: dat
 
 
 def get_all_events(sort_by: Optional[str] = Query(None), db: Session = None):
+    """
+    Retrieves a list of all events optionally sorted.
+
+    Args:
+        sort_by (Optional[str]): Field to sort by (e.g., "location", "date").
+        db (Session): Database session.
+
+    Returns:
+        list: List of all events.
+    """
     events = db.query(Event)
     if sort_by == "location":
         events = events.order_by(Event.location)
@@ -57,6 +83,16 @@ def get_all_events(sort_by: Optional[str] = Query(None), db: Session = None):
 
 
 def get_event(event_id: int = Path(..., description="ID of the event to retrieve"), db: Session = None):
+    """
+    Retrieves details of a specific event by its ID.
+
+    Args:
+        event_id (int): ID of the event to retrieve.
+        db (Session): Database session.
+
+    Returns:
+        dict: Details of the event.
+    """
     event = db.query(Event).filter(Event.id == event_id).first()
     if event is None:
         return {"message": "Event not found"}
@@ -64,10 +100,20 @@ def get_event(event_id: int = Path(..., description="ID of the event to retrieve
 
 
 def get_event_by(filter_by: str, filter_value: str, db):
+    """
+    Retrieves events based on a specific filter.
+
+    Args:
+        filter_by (str): Field to filter by.
+        filter_value (str): Value of the filter.
+        db (Session): Database session.
+
+    Returns:
+        list: List of events matching the filter criteria.
+    """
     query = db.query(Event)
     if filter_by and filter_value:
-        # Build the filter based on the provided parameters
-        filter_condition = getattr(Event, filter_by).startswith(filter_value)  # Access attribute dynamically
+        filter_condition = getattr(Event, filter_by).startswith(filter_value)
         query = query.filter(filter_condition)
         events = query.all()
         if not events:
@@ -82,7 +128,21 @@ def update_event(event_id: int = Path(..., description="ID of the event to updat
                  location: Optional[str] = Body(None),
                  participants: List[str] = Body(None),
                  db: Session = None):
-    """Updates an existing event by its ID."""
+    """
+    Updates an existing event by its ID.
+
+    Args:
+        event_id (int): ID of the event to update.
+        title (Optional[str]): New title of the event.
+        description (Optional[str]): New description of the event.
+        date (Optional[datetime]): New date and time of the event.
+        location (Optional[str]): New location of the event.
+        participants (List[str]): List of new participants' email addresses.
+        db (Session): Database session.
+
+    Returns:
+        dict: Message indicating success or failure of event update along with updated event details.
+    """
     event = db.query(Event).filter(Event.id == event_id).first()
     if event is None:
         return {"message": "Event not found"}
@@ -103,7 +163,7 @@ def update_event(event_id: int = Path(..., description="ID of the event to updat
                 return {f"participant {participant} should be a valid email"}
             if participant not in participants_list:
                 event.participants += "," + participant
-    db.commit()  # Commit changes to the database
+    db.commit()
 
     es = eventScheduler()
     es.send_reminder(event)
@@ -112,7 +172,16 @@ def update_event(event_id: int = Path(..., description="ID of the event to updat
 
 
 def delete_event(event_id: int = Path(..., description="ID of the event to delete"), db: Session = None):
-    """Deletes an event by its ID."""
+    """
+    Deletes an event by its ID.
+
+    Args:
+        event_id (int): ID of the event to delete.
+        db (Session): Database session.
+
+    Returns:
+        dict: Message indicating success or failure of event deletion.
+    """
     event = db.query(Event).filter(Event.id == event_id).first()
     if event is None:
         return {"message": "Event not found"}
@@ -122,6 +191,12 @@ def delete_event(event_id: int = Path(..., description="ID of the event to delet
 
 
 def get_db():
+    """
+    Dependency function to provide a database session.
+
+    Returns:
+        Session: Database session.
+    """
     db = SessionLocal()
     try:
         yield db
@@ -131,7 +206,13 @@ def get_db():
 
 def is_valid_email(email):
     """
-    This function uses a regular expression to validate a basic email format.
+    Validates a basic email format using regular expressions.
+
+    Args:
+        email (str): Email address to validate.
+
+    Returns:
+        bool: True if the email is valid, False otherwise.
     """
     regex = r"^[^@]+@[^@]+\.[^@]+$"
     return bool(re.match(regex, email))
